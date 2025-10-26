@@ -42,7 +42,7 @@ button:hover {
 
 .error {
     color: red;
-    font-size: 13px;
+    font-size: 14px;
 }
 /* Improve responsiveness */
 @media (max-width: 600px) {
