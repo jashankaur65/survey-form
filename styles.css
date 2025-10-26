@@ -36,7 +36,11 @@ button {
     width: 100%;
 }
 
+button:hover {
+    background-color: #555;
+}
+
 .error {
     color: red;
-    font-size: 14px;
+    font-size: 13px;
 }
