@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Survey</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <h1>Survey Form</h1>
+
+    <form id="surveyForm" action="https://httpbin.org/post" method="POST" novalidate>
+
+        <!-- Name -->
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name">
+        <span class="error" id="nameError"></span>
+
+        <!-- Email -->
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email">
+        <span class="error" id="emailError"></span>
+
+        <!-- Radio Buttons -->
+        <fieldset>
+            <legend>Which type of movies do you like?</legend>
+            <label><input type="radio" name="movie" value="Action"> Action</label>
+            <label><input type="radio" name="movie" value="Comedy"> Comedy</label>
+            <label><input type="radio" name="movie" value="Horror"> Horror</label>
+        </fieldset>
+        <span class="error" id="movieError"></span>
+
+        <!-- Checkboxes -->
+        <fieldset>
+            <legend>Choose your hobbies:</legend>
+            <label><input type="checkbox" name="hobby" value="Reading"> Reading</label>
+            <label><input type="checkbox" name="hobby" value="Music"> Music</label>
+            <label><input type="checkbox" name="hobby" value="Sports"> Sports</label>
+        </fieldset>
+        <span class="error" id="hobbyError"></span>
+
+        <!-- Dropdown -->
+        <label for="country">Select Your Country:</label>
+        <select id="country" name="country">
+            <option value="">-- Select --</option>
+            <option value="Canada">Canada</option>
+            <option value="India">India</option>
+            <option value="USA">USA</option>
+        </select>
+        <span class="error" id="countryError"></span>
+
+        <!-- Regex Field: Username -->
+        <label for="username">Create Username (letters & numbers only):</label>
+        <input type="text" id="username" name="username">
+        <span class="error" id="usernameError"></span>
+
+        <!-- Extra Field: Number -->
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age">
+        <span class="error" id="ageError"></span>
+
+        <!-- Extra Field: Textarea -->
+        <label for="feedback">Any Feedback:</label>
+        <textarea id="feedback" name="feedback"></textarea>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <script src="script.js"></script>
+</body>
+</html>
