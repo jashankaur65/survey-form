@@ -8,19 +8,19 @@
 </head>
 <body>
 
-    <h1>Survey Form</h1>
+    <h1>Movie & Hobbies Survey Form</h1>
 
     <form id="surveyForm" action="https://httpbin.org/post" method="POST" novalidate>
 
         <!-- Name -->
         <label for="name">Full Name:</label>
-        <input type="text" id="name" name="name">
-        <span class="error" id="nameError"></span>
+        <input type="text" id="name" name="name" aria-required="true" aria-describedby="nameError">
+        <span class="error" id="nameError" aria-live="polite"></span>
 
         <!-- Email -->
         <label for="email">Email Address:</label>
-        <input type="email" id="email" name="email">
-        <span class="error" id="emailError"></span>
+        <input type="email" id="email" name="email" aria-required="true" aria-describedby="emailError">
+        <span class="error" id="emailError" aria-live="polite"></span>
 
         <!-- Radio Buttons -->
         <fieldset>
@@ -29,7 +29,7 @@
             <label><input type="radio" name="movie" value="Comedy"> Comedy</label>
             <label><input type="radio" name="movie" value="Horror"> Horror</label>
         </fieldset>
-        <span class="error" id="movieError"></span>
+        <span class="error" id="movieError" aria-live="polite"></span>
 
         <!-- Checkboxes -->
         <fieldset>
@@ -38,27 +38,27 @@
             <label><input type="checkbox" name="hobby" value="Music"> Music</label>
             <label><input type="checkbox" name="hobby" value="Sports"> Sports</label>
         </fieldset>
-        <span class="error" id="hobbyError"></span>
+        <span class="error" id="hobbyError" aria-live="polite"></span>
 
         <!-- Dropdown -->
         <label for="country">Select Your Country:</label>
-        <select id="country" name="country">
+        <select id="country" name="country" aria-required="true" aria-describedby="countryError">
             <option value="">-- Select --</option>
             <option value="Canada">Canada</option>
             <option value="India">India</option>
             <option value="USA">USA</option>
         </select>
-        <span class="error" id="countryError"></span>
+        <span class="error" id="countryError" aria-live="polite"></span>
 
         <!-- Regex Field: Username -->
         <label for="username">Create Username (letters & numbers only):</label>
-        <input type="text" id="username" name="username">
-        <span class="error" id="usernameError"></span>
+        <input type="text" id="username" name="username" aria-required="true" aria-describedby="usernameError">
+        <span class="error" id="usernameError" aria-live="polite"></span>
 
         <!-- Extra Field: Number -->
         <label for="age">Age:</label>
-        <input type="number" id="age" name="age">
-        <span class="error" id="ageError"></span>
+        <input type="number" id="age" name="age" aria-required="true" aria-describedby="ageError">
+        <span class="error" id="ageError" aria-live="polite"></span>
 
         <!-- Extra Field: Textarea -->
         <label for="feedback">Any Feedback:</label>
