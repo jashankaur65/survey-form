@@ -1,9 +1,14 @@
 // Get form element
 const form = document.getElementById("surveyForm");
 
+// Function to clear error for an input
+function clearError(id) {
+    document.getElementById(id).textContent = "";
+}
+
 // Listen to submit event
 form.addEventListener("submit", function (e) {
-    e.preventDefault(); // Prevent default submission
+    e.preventDefault();
 
     let isValid = true;
 
@@ -60,8 +65,18 @@ form.addEventListener("submit", function (e) {
         isValid = false;
     }
 
-    // If all valid, submit the form
+    // Submit form if valid
     if (isValid) {
         form.submit();
     }
+});
+
+// Clear errors when user types or changes input
+document.querySelectorAll("input, select, textarea").forEach(input => {
+    input.addEventListener("input", function() {
+        clearError(this.id + "Error");
+    });
+    input.addEventListener("change", function() {
+        clearError(this.id + "Error");
+    });
 });
