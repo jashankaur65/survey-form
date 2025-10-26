@@ -44,3 +44,18 @@ button:hover {
     color: red;
     font-size: 13px;
 }
+/* Improve responsiveness */
+@media (max-width: 600px) {
+    #surveyForm {
+        width: 95%;
+        padding: 15px;
+    }
+}
+
+/* Focus state for accessibility */
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 3px solid #005fcc;
+    background-color: #f0f8ff;
+}
